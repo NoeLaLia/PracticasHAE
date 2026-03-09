@@ -28,10 +28,10 @@ sbit LCD_D2_Direction at TRISD2_bit;
 void interrupt(){
 
  char key;
- key = tecla(); //en la variable key se guarda un número correspondiente al valor ASCII de la tecla pulsada
+ key = tecla(); //en la variable key se guarda un nï¿½mero correspondiente al valor ASCII de la tecla pulsada
  Lcd_Chr_CP(key);
  x = PORTB; // para poder borrar el bit RBIF (define x global)
- INTCON.RBIF=0; // se borra el bit RBIF después de llamar a la función tecla()
+ INTCON.RBIF=0; // se borra el bit RBIF despuï¿½s de llamar a la funciï¿½n tecla()
 }
 
 void main()
@@ -41,8 +41,8 @@ void main()
  ADCON1 = 0x07; //configuraci?n de los canales anal?gicos (AN) como digitales
 
  // configuracion de puertos
- TRISB = 0xF0;
- TRISD = 0x00;
+ TRISB = 0xF0;// Por como funciona el teclado 
+ TRISD = 0x00; // son salidas
 
  //configuracion e inicializacion de los m?dulos del PIC que se vayan a utilizar
  Lcd_Init ();
@@ -55,7 +55,7 @@ void main()
 
  while(1) //bucle infinito
  {
-
+    
  }
 }
 // Componentes ISIS: PIC18F452, RES, LED-BLUE
