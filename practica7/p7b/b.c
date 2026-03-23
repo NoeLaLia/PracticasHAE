@@ -21,18 +21,21 @@ void interrupt()
 {
  if (INTCON.TMR0IF == 1)
  {
-  TMR0H = (28036 >> 8);
-  TMR0L = 28036;
+  TMR0H = (49911 >> 8);
+  TMR0L = 49911;
+
   INTCON.TMR0IF = 0;
   
- PORTE.B0 = !PORTE.B0;
- ADCON0.GO = 1;
- while(ADCON0.GO);
+  PORTE.B0 = !PORTE.B0;
+  ADCON0.GO = 1;
+  while(ADCON0.GO);
  
- tension = (ADRESH << 8) + ADRESL;
+  tension = (ADRESH << 8) + ADRESL;
  
- temp = (tension * 500) / 1023 - 50;
- 
+  temp = (tension * 500) / 1023 - 50;
+  IntToStr(temp, print);
+  Lcd_Out(1,1, print);
+  Lcd_Chr(1,8, 223);
  }
 
 
@@ -49,8 +52,8 @@ void main()
  Lcd_Init();
 
  T0CON = 0x06;
- TMR0H = (28036 >> 8);
- TMR0L = 28036;
+ TMR0H = (49911 >> 8);
+ TMR0L = 49911;
 
  T0CON.TMR0ON = 1;
 
@@ -60,7 +63,6 @@ void main()
 
  while(1)
  {
-  IntToStr(temp, print);
-  Lcd_Out(1,1, print);
+
  }
 }

@@ -47,8 +47,8 @@ void mostrar_temp() {
 void interrupt() {
     // Interrupcion Timer0 - lectura de temperatura cada 1.2s
     if (INTCON.TMR0IF == 1) {
-        TMR0H = (28036 >> 8);
-        TMR0L = 28036;
+        TMR0H = (49911 >> 8);
+        TMR0L = 49911;
         INTCON.TMR0IF = 0;
 
         PORTE.B0 = !PORTE.B0;
@@ -85,8 +85,8 @@ void main() {
 
     // Config Timer0: 16-bit, prescaler 1:128
     T0CON = 0x06;
-    TMR0H = (28036 >> 8);
-    TMR0L = 28036;
+    TMR0H = (49911 >> 8);
+    TMR0L = 49911;
     T0CON.TMR0ON = 1;
 
     // Habilitar interrupcion Timer0
