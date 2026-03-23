@@ -1,0 +1,15 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -RA -DL -O11111114 -fo8 -N"C:\Users\Electronica\Desktop\practica7\p7c\p7c.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\Electronica\Desktop\practica7\p7c\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "p7c.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	P18F452.c
+diagnostics: 1178	123	Compiled Successfully	P18F452.c
+diagnostics: 0	122	Compilation Started	__Lib_Delays.c
+diagnostics: 172	123	Compiled Successfully	__Lib_Delays.c
+diagnostics: 0	122	Compilation Started	p7c.c
+diagnostics: 58	123	Compiled Successfully	p7c.c
+diagnostics: 0	127	All files Compiled in 31 ms	 
+hint: 0	1144	Used RAM (bytes): 52 (3%)  Free RAM (bytes): 1463 (97%)	Used RAM (bytes): 52 (3%)  Free RAM (bytes): 1463 (97%)
+hint: 0	1144	Used ROM (bytes): 2798 (9%)  Free ROM (bytes): 29970 (91%)	Used ROM (bytes): 2798 (9%)  Free ROM (bytes): 29970 (91%)
+diagnostics: 0	125	Project Linked Successfully	p7c.mcppi
+diagnostics: 0	128	Linked in 16 ms	 
+diagnostics: 0	129	Project 'p7c.mcppi' completed: 141 ms	 
+diagnostics: 0	103	Finished successfully: 23 mar. 2026, 13:43:25	p7c.mcppi
