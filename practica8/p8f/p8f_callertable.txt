@@ -1,5 +1,0 @@
-main
-	__CC2DW
-	SPI1_Init
-interrupt
-	SPI1_Write
