@@ -16,7 +16,7 @@ void main() {
               //Reiniciamos
               D = 0;
               //Subimos la primera mitad
-              for(i = 0; i < 256; i++){
+              for(i = 0; i < 512; i++){
                     SPI1_Write(D >> 6); // se envía al DAC el byte alto del paquete de 16 bits.
                     SPI1_Write(D << 2); // se envía al DAC el byte bajo del paquete de 16 bits.
                     PORTC.B0 = 1;
@@ -33,7 +33,7 @@ void main() {
               delay_ms(70);
               PORTC.B0 = 0;
               //Subimos hasta el final
-              for(i = 0; i < 256; i++){
+              for(i = 0; i < 512; i++){
                     SPI1_Write(D >> 6); // se envía al DAC el byte alto del paquete de 16 bits.
                     SPI1_Write(D << 2); // se envía al DAC el byte bajo del paquete de 16 bits.
                     PORTC.B0 = 1;
