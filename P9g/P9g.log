@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -DL -O11111114 -fo6 -N"C:\Users\User\OneDrive - Universidade de Vigo\Escritorio\Universidad_info\HAE\P9\P9g\P9g.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\User\OneDrive - Universidade de Vigo\Escritorio\Universidad_info\HAE\P9\P9g\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "P9g.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+hint: 0	1139	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	P9g.c
+diagnostics: 102	123	Compiled Successfully	P9g.c
+diagnostics: 0	127	All files Compiled in 110 ms	 
+hint: 0	1144	Used RAM (bytes): 17 (1%)  Free RAM (bytes): 1498 (99%)	Used RAM (bytes): 17 (1%)  Free RAM (bytes): 1498 (99%)
+hint: 0	1144	Used ROM (bytes): 408 (1%)  Free ROM (bytes): 32360 (99%)	Used ROM (bytes): 408 (1%)  Free ROM (bytes): 32360 (99%)
+diagnostics: 0	125	Project Linked Successfully	P9g.mcppi
+diagnostics: 0	128	Linked in 15 ms	 
+diagnostics: 0	129	Project 'P9g.mcppi' completed: 265 ms	 
+diagnostics: 0	103	Finished successfully: 17 Abr. 2026, 00:15:39	P9g.mcppi
