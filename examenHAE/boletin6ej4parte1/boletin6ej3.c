@@ -15,6 +15,7 @@ void interrupt(){
                                            }
                                            break;
                                       case 1:
+                                           x++;
                                            if(x == 25 && PORTA.B0){
                                                 estado = 2;
                                            }
@@ -22,7 +23,6 @@ void interrupt(){
                                                 estado = 0;
                                                 PORTC.B0 = 0;
                                            }
-                                           x++;
                                            break;
                                       case 2:
                                            x = 0;
