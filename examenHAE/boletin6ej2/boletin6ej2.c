@@ -15,11 +15,11 @@ void interrupt(){
                                            }
                                            break;
                                       case 1:
+                                           x++;
                                            if(x == 30){
                                                 estado = 2;
                                                 PORTA.B0 = 0;
                                            }
-                                           x++;
                                            break;
                                       case 2:
                                            if(!PORTB.B3){
