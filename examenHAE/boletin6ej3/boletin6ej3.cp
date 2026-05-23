@@ -1,0 +1,44 @@
+#line 1 "C:/Users/noeli/Desktop/HAE/examenHAE/boletin6ej3/boletin6ej3.c"
+int alfa = 3036;
+char estado = 0;
+void interrupt(){
+ if(INTCON.TMR0IF){
+ INTCON.TMR0IF = 0;
+ TMR0H = (alfa >> 8);
+ TMR0L = alfa;
+ switch(estado){
+ case 0:
+ if(PORTB.B4){
+ estado = 1;
+ }
+ break;
+ case 1:
+ if(!PORTB.B4){
+ PORTA.B0 = 1;
+ estado = 2;
+ }
+ break;
+ case 2:
+ PORTA.B0 = 0;
+ estado = 0;
+ }
+ }
+}
+void main() {
+ ADCON1 = 0x07;
+ TRISA.B0 = 0;
+ TRISB.B3 = 1;
+
+ INTCON.TMR0IF = 0;
+ INTCON.TMR0IE = 1;
+ T0CON = 0x14;
+
+ INTCON.GIE = 1;
+ TMR0H = (alfa >> 8);
+ TMR0L = alfa;
+ T0CON.TMR0ON = 1;
+ while(1){
+ asm nop;
+}
+
+}
