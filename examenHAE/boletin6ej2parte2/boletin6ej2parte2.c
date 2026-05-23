@@ -20,11 +20,11 @@ void interrupt(){
                                                          }
                                            break;
                                       case 2:
+                                           x++;
                                            if(x == 10){
                                                 PORTA.B0 = 0;
                                                 estado = 3;
                                            }
-                                           x++;
                                            break;
                                       case 3:
                                            if(!PORTB.B3){
